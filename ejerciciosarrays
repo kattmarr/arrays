@@ -4,9 +4,12 @@
 function procesarPedido(pedido) {
     // Tu código aquí
     function procesarPedido(pedido) {
-        const cliente = pedido.shift();
+if(pedido.length ===0){
+return;
+}
+        const nombrecliente = pedido.shift();
         pedido.unshift("bebida");
-        pedido.push(cliente);
+        pedido.push(nombrecliente);
         return pedido;
     }
     
